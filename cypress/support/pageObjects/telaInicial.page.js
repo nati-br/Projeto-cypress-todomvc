@@ -14,18 +14,6 @@ class telaInicial{
        .and('include',texto)
     }
 
-    validarContador(x){
-        cy.get(filtrarItem.contador)
-        .find('strong')
-        .should('have.text', x)
-    }
-
-    //validação do tamanho do array
-    validarSizeToDo(x){
-        cy.get(concluirItem.validarListaItens)
-        should('have.length',x)
-    }
-
     concluirItem(){
         cy.get(concluirItem.buttonConcluirItem)
         .first()
